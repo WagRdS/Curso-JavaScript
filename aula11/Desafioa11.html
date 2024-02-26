@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Aula 011</title>
+    <style>
+        *{
+            margin-left: 20px;
+        }
+        form{
+            background-color: lightblue;
+            border-radius: 10px;
+            width: 400px;
+            height: 80px;
+            text-align: center;
+            padding: 20px;
+        }
+        form > label, legend{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: darkgreen;
+            padding-bottom: 10px;
+        }
+        form > select{
+            font-size: 1.5em;
+            color: blue;
+        }
+        form > input{
+            font-size: 1.2em;
+            color: green;
+        }
+        div{
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio Condicional</h1>
+    <form action="" method="post">
+        <Legend>Escolha o seu estado</Legend>
+        <label for="iestado">UF:</label>
+        <select name="estado" id="iestado">
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="OT">Outros Estado</option>
+        </select>
+        <input type="button" value="Selecionar" onclick="validar()">
+    </form>
+    <div id="res">
+
+    </div>
+
+    <script>
+        var uf = document.getElementById('iestado')
+        var resp = document.getElementById('res')
+        function validar(){
+            if (uf.value == "SP"){
+                resp.innerHTML = "Você é Paulista"
+            } else if (uf.value == "RJ"){
+                resp.innerHTML = "Você é Carioca"
+            } else if (uf.value == "MG"){
+                resp.innerHTML = "Você é Mineiro"
+            } else if (uf.value == "ES"){
+                resp.innerHTML = "Você é Capichaba"
+            } else {
+                resp.innerHTML = "Você não nasceu no Sudeste"
+            }
+        }
+    </script>    
+        
+        
+
+</body>
+</html>
