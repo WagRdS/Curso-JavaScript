@@ -10,9 +10,9 @@
         }
         form{
             background-color: lightblue;
-            border-radius: 10px;
+            border-radius: 30px;
             width: 400px;
-            height: 80px;
+            height: 120px;
             text-align: center;
             padding: 20px;
         }
@@ -34,7 +34,7 @@
         div{
             margin-top: 20px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.3em;
+            font-size: 1.5em;
             color: red;
             font-weight: bold;
         }
@@ -50,13 +50,11 @@
             <option value="RJ">Rio de Janeiro</option>
             <option value="ES">Espírito Santo</option>
             <option value="MG">Minas Gerais</option>
-            <option value="OT">Outros Estado</option>
+            <option value="OT">Outro Estado</option>
         </select>
         <input type="button" value="Selecionar" onclick="validar()">
+        <div id="res"> </div>
     </form>
-    <div id="res">
-
-    </div>
 
     <script>
         var uf = document.getElementById('iestado')
