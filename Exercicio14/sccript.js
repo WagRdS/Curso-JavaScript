@@ -6,19 +6,32 @@ function contar(){
     let ind = document.getElementById('ind')
 
     if(ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0){
-        alert('[ERRO]: Faltam dados')
+        res.innerHTML = 'Impossível Contar'
+        ind.innerHTML = '....'
+        pas.innerHTML = '1'
     } else {
-        res.innerHTML = 'Contando \u{021D2}'
+        res.innerHTML = 'Contando \u{021D2} '
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(pas.value)
         let aux = 1
+        if(p <= 0 ){
+            alert('Impossível usar passo 0, precisa ser no mínimo 1')
+            p = 1
+        }
 
-        for(let c = 1; c <= f; c += p){
-            res.innerHTML += `${c} \u{021D2}`
-            aux++
+        if (i < f){
+            for(let c = i; c <= f; c += p){
+                res.innerHTML += `${c} \u{021D2} `
+                aux++
+            }
+        } else {
+            for(let c = i; c >= f; c -= p){
+                res.innerHTML += `${c} \u{021D2}`
+                aux++
+            }
         }
         res.innerHTML += `\u{1F3C1}`
-        ind.innerHTML = `Foram contados <stromg>${aux}</stromg> números`
+        ind.innerHTML = `Foram contados ${aux} números`
     }
 }

@@ -23,6 +23,12 @@ div{
     text-align: center;
     padding: 8px;
 }
+div#ind{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: green;
+}
 footer{
     color: white;
     text-align: center;
