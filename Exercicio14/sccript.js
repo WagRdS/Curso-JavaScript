@@ -19,6 +19,6 @@ function contar(){
             aux++
         }
         res.innerHTML += `\u{1F3C1}`
-        ind.innerHTML += `Foram contados <stromg>${aux}</stromg> números`
+        ind.innerHTML = `Foram contados <stromg>${aux}</stromg> números`
     }
 }
