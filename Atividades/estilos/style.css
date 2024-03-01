@@ -63,9 +63,7 @@ main > div > p {
     box-shadow: 3px 3px 5px rgb(0, 100, 0);
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.423);
 }
-#fim{
-    background-color: lightblue;
-}
+
 #res{
     background-color: lightblue;
 }
