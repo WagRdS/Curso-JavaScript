@@ -4,8 +4,9 @@ let sexo = document.getElementsByName('radsex')
 let tab = document.getElementById('res')
 
 function validar(){
-    if(nome.value.lenght == '' || email.value.lenght == ''){
-        alert('Preencha os campos acima!')
+    if(document.getElementById('txtn').value == '' || document.getElementById('txtem').value == ''){
+        alert('Preencha TODOS os campos!')
+        limpa()
     } else {
         tab.style.background = 'blue'
         tab.innerHTML = `\u{021D2} ${nome.value} </br>`
@@ -20,7 +21,7 @@ function validar(){
 
 function limpa(){
     document.getElementById('txtn').value = ''
-    document.getElementsByName('radsex')[0].checked
+    sexo[0].checked = true
     document.getElementById('txtem').value = ''
     res.innerHTML = ''
     res.style.background = 'lightblue'
